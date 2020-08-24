@@ -11,9 +11,13 @@ function Pagination(props) {
                         ))}
                     </tr>
                 </thead>
-                <table>
-
-                </table>
+                <tbody>
+                    {props.data.map(row => (
+                        <tr key={row[props.keyName]}>
+                            <td>{row.fullName}</td>
+                        </tr>
+                    ))}
+                </tbody>
                 <tfoot>
                     <tr>
                         {props.columns.map(col => (
