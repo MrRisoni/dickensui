@@ -4,14 +4,47 @@ import './SideBar.css';
 function SideBar() {
     return (
         <div className="bg-light border-right" id="sidebar-wrapper">
-            <div className="sidebar-heading">Start Bootstrap</div>
+            <div className="sidebar-heading">Dickens </div>
             <div className="list-group list-group-flush">
                 <a href="#" className="list-group-item list-group-item-action bg-light">Dashboard</a>
-                <a href="#" className="list-group-item list-group-item-action bg-light">Shortcuts</a>
-                <a href="#" className="list-group-item list-group-item-action bg-light">Overview</a>
-                <a href="#" className="list-group-item list-group-item-action bg-light">Events</a>
-                <a href="#" className="list-group-item list-group-item-action bg-light">Profile</a>
-                <a href="#" className="list-group-item list-group-item-action bg-light">Status</a>
+                <a href="#" className="list-group-item list-group-item-action bg-light">Timetable</a>
+                <li className="list-group-item list-group-item-action bg-light">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarStudentsDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Students
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="navbarStudentsDropdown">
+                        <a className="dropdown-item" href="#">New Student</a>
+                        <a className="dropdown-item" href="#">Students List</a>
+                        <a className="dropdown-item" href="#">Search</a>
+                    </div>
+                </li>
+                <li className="list-group-item list-group-item-action bg-light">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarTeachersDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Teachers
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="navbarTeachersDropdown">
+                        <a className="dropdown-item" href="#">New Teacher</a>
+                        <a className="dropdown-item" href="#">Teachers List</a>
+                        <a className="dropdown-item" href="#">Search</a>
+                    </div>
+                </li> <li className="list-group-item list-group-item-action bg-light">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Groups
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a className="dropdown-item" href="#">New Group</a>
+                    <a className="dropdown-item" href="#">Groups List</a>
+                </div>
+            </li>
+                <a href="#" className="list-group-item list-group-item-action bg-light">Analytics</a>
+                <a href="#" className="list-group-item list-group-item-action bg-light">Users</a>
+                <a href="#" className="list-group-item list-group-item-action bg-light">Staff</a>
+                <a href="#" className="list-group-item list-group-item-action bg-light">My Account</a>
+
+
             </div>
         </div>
     );
