@@ -1,12 +1,29 @@
 import React, {Component} from 'react';
 import Pagination from "../Pagination";
 import SideBar from "../SideBar";
+import axios from "axios";
 
 class StudentsList extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {
+            pages:0,
+            totalRecords:0,
+            data:[],
+            fetched:false,
+        }
+    }
+
+    componentDidMount() {
+        const self = this;
+        axios.get('http://localhost:8080/api/students').then(rsp =>{
+            self.setState({
+                data: rsp.data.students,
+                totalRecords: rsp.data.totalRecords,
+                fetched:true
+            })
+        })
     }
 
     render() {
@@ -44,8 +61,9 @@ class StudentsList extends React.Component {
             <section id="studentsList">
                 <div className="d-flex" id="wrapper">
                     <SideBar/>
-                    <Pagination columns={colNames}/>
-                </div>
+                    {this.state.fetched &&
+                    <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
+                    }                </div>
             </section>
         )
     }
