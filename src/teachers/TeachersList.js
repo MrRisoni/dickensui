@@ -34,14 +34,10 @@ class StudentsList extends React.Component {
             {
                 id:5,
                 title:'Debts'
-            },
-            {
-                id:6,
-                title:'Last Payed'
             }
         ]
         return (
-            <section id="studentsList">
+            <section id="teachersList">
                 <div className="d-flex" id="wrapper">
                     <SideBar/>
                     <Pagination columns={colNames}/>

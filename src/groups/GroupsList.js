@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Pagination from "../Pagination";
 import SideBar from "../SideBar";
 
-class StudentsList extends React.Component {
+class GroupsList extends React.Component {
     constructor(props) {
         super(props);
 
@@ -17,31 +17,43 @@ class StudentsList extends React.Component {
             },
             {
                 id:1,
-                title:'Name'
+                title:'title'
             },
             {
                 id:2,
-                title:'Registration Date'
+                title:'Speed'
             },
             {
                 id:3,
-                title:'#Groups'
+                title:'Age'
             },
             {
                 id:4,
-                title:'Payments'
+                title:'Starts'
             },
             {
                 id:5,
-                title:'Debts'
+                title:'Ends'
             },
             {
                 id:6,
-                title:'Last Payed'
+                title:'Students'
+            },
+            {
+                id:7,
+                title:'Hours'
+            },
+            {
+                id:8,
+                title:'Payments'
+            },
+            {
+                id:9,
+                title:'Debts'
             }
         ]
         return (
-            <section id="studentsList">
+            <section id="groupsList">
                 <div className="d-flex" id="wrapper">
                     <SideBar/>
                     <Pagination columns={colNames}/>
@@ -51,4 +63,4 @@ class StudentsList extends React.Component {
     }
 }
 
-export default StudentsList;
+export default GroupsList;

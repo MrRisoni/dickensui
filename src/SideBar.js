@@ -15,7 +15,7 @@ function SideBar() {
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarStudentsDropdown">
                         <a className="dropdown-item" href="#">New Student</a>
-                        <a className="dropdown-item" href="#">Students List</a>
+                        <a className="dropdown-item" href="/students">Students List</a>
                         <a className="dropdown-item" href="#">Search</a>
                     </div>
                 </li>
@@ -26,7 +26,7 @@ function SideBar() {
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarTeachersDropdown">
                         <a className="dropdown-item" href="#">New Teacher</a>
-                        <a className="dropdown-item" href="#">Teachers List</a>
+                        <a className="dropdown-item" href="/teachers">Teachers List</a>
                         <a className="dropdown-item" href="#">Search</a>
                     </div>
                 </li> <li className="list-group-item list-group-item-action bg-light">
@@ -36,7 +36,7 @@ function SideBar() {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a className="dropdown-item" href="#">New Group</a>
-                    <a className="dropdown-item" href="#">Groups List</a>
+                    <a className="dropdown-item" href="/groups">Groups List</a>
                 </div>
             </li>
                 <a href="#" className="list-group-item list-group-item-action bg-light">Analytics</a>
