@@ -14,6 +14,10 @@
     background-color: lawngreen;
 }
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #99ccff;
+}
+
 #sidebar-wrapper {
     min-height: 100vh;
     margin-left: 0;
@@ -26,11 +30,11 @@
 
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 #sidebar-wrapper .list-group {
-    width: 15rem;
+    width: 12rem;
 }
 
 #page-content-wrapper {
