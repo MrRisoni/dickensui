@@ -87,11 +87,9 @@ class GroupsList extends React.Component {
         ]
         return (
             <section id="groupsList">
-                <div className="d-flex" id="wrapper">
-                    <SideBar/>
-                    {this.state.fetched &&
-                        <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
-                    }                </div>
+                {this.state.fetched &&
+                    <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
+                }
             </section>
         )
     }

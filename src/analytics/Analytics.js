@@ -9,10 +9,8 @@ class Analytics extends React.Component {
     render() {
 
         return (
-                <div className="d-flex" id="wrapper">
-                    <SideBar/>
-                  <Donut/>
-                </div>
+            <Donut/>
+
 
         )
     }

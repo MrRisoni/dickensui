@@ -3,7 +3,7 @@ import Pagination from "../Pagination";
 import SideBar from "../SideBar";
 import axios from 'axios'
 
-class StudentsList extends React.Component {
+class TeachersList extends React.Component {
     constructor(props) {
         super(props);
 
@@ -57,15 +57,12 @@ class StudentsList extends React.Component {
         ]
         return (
             <section id="teachersList">
-                <div className="d-flex" id="wrapper">
-                    <SideBar/>
-                    {this.state.fetched &&
-                        <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
-                    }
-                </div>
+                {this.state.fetched &&
+                    <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
+                }
             </section>
         )
     }
 }
 
-export default StudentsList;
+export default TeachersList;

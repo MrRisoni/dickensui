@@ -39,7 +39,7 @@ function SideBar() {
                     <a className="dropdown-item" href="/groups">Groups List</a>
                 </div>
             </li>
-                <a href="#" className="list-group-item list-group-item-action ">Analytics</a>
+                <a href="/analytics" className="list-group-item list-group-item-action ">Analytics</a>
                 <a href="#" className="list-group-item list-group-item-action">Users</a>
                 <a href="#" className="list-group-item list-group-item-action ">Staff</a>
                 <a href="#" className="list-group-item list-group-item-action ">My Account</a>

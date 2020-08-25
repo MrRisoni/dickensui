@@ -59,11 +59,9 @@ class StudentsList extends React.Component {
         ]
         return (
             <section id="studentsList">
-                <div className="d-flex" id="wrapper">
-                    <SideBar/>
-                    {this.state.fetched &&
+                {this.state.fetched &&
                     <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
-                    }                </div>
+                }
             </section>
         )
     }
