@@ -5,7 +5,7 @@ function Pagination(props) {
     console.log(props.data)
     return (
         <section className="Pagination">
-            <table className="table table-striped table-bordered table-hover">
+            <table className="table table-striped table-bordered table-hover ">
                 <thead>
                     <tr>
                         {props.columns.map(col => (
@@ -21,7 +21,7 @@ function Pagination(props) {
                                     return (<td key={k}>{row[val]}</td>)
                                 }
                                 else {
-                                    return (<td><Link key={k} to={`/users/${row['id']}`}>{row[val]}</Link></td>)
+                                    return (<td><Link key={k} to={props.urlRef + row['id']}>{row[val]}</Link></td>)
                                 }
                             })
                             }
