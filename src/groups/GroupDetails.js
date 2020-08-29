@@ -101,15 +101,18 @@ class GroupDetails extends React.Component {
 
                         <table className="table table-sm  table-striped table-bordered">
                             <thead>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Month</th>
-                            <th>Amount</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Month</th>
+                                <th>Amount</th>
                             </thead>
                             <tbody>
                                 {this.state.data.teacherDebts.map(tch => (
                                     <tr>
                                         <td>{tch.entityId}</td>
+                                        <td>{tch.fullName}</td>
+                                        <td>{tch.monthTitle} {tch.year}</td>
+                                        <td>{tch.amount}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -123,23 +126,81 @@ class GroupDetails extends React.Component {
                         </div>
                         <table className="table table-sm  table-striped table-bordered">
                             <thead>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Month</th>
-                            <th>Amount</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Month</th>
+                                <th>Amount</th>
                             </thead>
                             <tbody>
-                            {this.state.data.studentsDebts.map(std => (
-                                <tr>
-                                    <td>{std.entityId}</td>
-                                </tr>
-                            ))}
+                                {this.state.data.studentsDebts.map(std => (
+                                     <tr>
+                                        <td>{std.entityId}</td>
+                                        <td>{std.fullName}</td>
+                                        <td>{std.monthTitle} {std.year}</td>
+                                        <td>{std.amount}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
 
                     </div>
                 </div>
 
+                <h5>Students list</h5>
+
+                <div className="row">
+                    <div className="col-10">
+                        <table className="table table-sm table-striped table-bordered table-hover">
+                            <thead>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Joined</th>
+                            <th>Dropped</th>
+                            <th>Payed</th>
+                            <th>Debt</th>
+                            </thead>
+                            <tbody>
+                            {this.state.data.studentsList.map(std => (
+                                <tr>
+                                    <td>{std.studentId}</td>
+                                    <td>{std.fullName}</td>
+                                    <td>{std.joined}</td>
+                                    <td>{std.dropped}</td>
+                                    <td>{std.sumPayed}</td>
+                                    <td>{std.sumOwns}</td>
+
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h5>Courses History</h5>
+                <div className="row">
+                    <div className="col-10">
+                        <table className="table table-sm table-striped table-bordered table-hover">
+                            <thead>
+                            <th>Started</th>
+                            <th>Duration</th>
+                            <th>Room</th>
+                            <th>Fee</th>
+                            <th>Wage</th>
+                            </thead>
+                            <tbody>
+                            {this.state.data.history.map(hist => (
+                                <tr>
+                                    <td>{hist.started}</td>
+                                    <td>{hist.duration}</td>
+                                    <td>{hist.roomName}</td>
+                                    <td>{hist.fee}</td>
+                                    <td>{hist.wage}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
                 </section>
             )
