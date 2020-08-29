@@ -1,6 +1,8 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 function Pagination(props) {
+    console.log(props.data)
     return (
         <section className="Pagination">
             <table className="table table-striped table-bordered table-hover">
@@ -15,7 +17,12 @@ function Pagination(props) {
                     {props.data.map(row => (
                         <tr key={row[props.keyName]}>
                             {Object.keys(row).map((val, k) => {
-                                return (<td key={k}>{row[val]}</td>)
+                                if (k >0) {
+                                    return (<td key={k}>{row[val]}</td>)
+                                }
+                                else {
+                                    return (<td><Link key={k} to={`/users/${row['id']}`}>{row[val]}</Link></td>)
+                                }
                             })
                             }
                         </tr>

@@ -88,7 +88,10 @@ class GroupsList extends React.Component {
         return (
             <section id="groupsList">
                 {this.state.fetched &&
-                    <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
+                    <Pagination columns={colNames}
+                                urlRef={"/group/info/"}
+                                keyName="id"
+                                data={this.state.data}/>
                 }
             </section>
         )
