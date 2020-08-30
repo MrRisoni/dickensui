@@ -5,37 +5,39 @@ function Pagination(props) {
     console.log(props.data)
     return (
         <section className="Pagination">
-            <table className="table table-striped table-bordered table-hover ">
-                <thead>
+            <div className="table-responsive">
+                <table className="table table-striped table-bordered table-hover ">
+                    <thead>
                     <tr>
                         {props.columns.map(col => (
                             <th key={col.id}>{col.title}</th>
                         ))}
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {props.data.map(row => (
                         <tr key={row[props.keyName]}>
                             {Object.keys(row).map((val, k) => {
-                                if (k >0) {
+                                if (k > 0) {
                                     return (<td key={k}>{row[val]}</td>)
-                                }
-                                else {
-                                    return (<td><Link key={k} to={props.urlRef + row[props.keyName]}>{row[val]}</Link></td>)
+                                } else {
+                                    return (
+                                        <td><Link key={k} to={props.urlRef + row[props.keyName]}>{row[val]}</Link></td>)
                                 }
                             })
                             }
                         </tr>
                     ))}
-                </tbody>
-                <tfoot>
+                    </tbody>
+                    <tfoot>
                     <tr>
                         {props.columns.map(col => (
                             <th key={col.id}>{col.title}</th>
                         ))}
                     </tr>
-                </tfoot>
-            </table>
+                    </tfoot>
+                </table>
+            </div>
 
             <div className="row">
                 <div className="col-10">

@@ -6,8 +6,8 @@ function SideBar() {
         <div className="bg-dark border-right" id="sidebar-wrapper">
             <div className="sidebar-heading">Dickens</div>
             <div className="list-group list-group-flush">
-                <a href="#" className="list-group-item list-group-item-action ">Dashboard</a>
-                <a href="#" className="list-group-item list-group-item-action ">Timetable</a>
+                <a href="/" className="list-group-item list-group-item-action ">Dashboard</a>
+                <a href="/" className="list-group-item list-group-item-action ">Timetable</a>
                 <li className="list-group-item list-group-item-action">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarStudentsDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
