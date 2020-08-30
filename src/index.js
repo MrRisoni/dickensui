@@ -11,6 +11,7 @@ import DefaultLayout from './DefaultLayout';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GroupDetails from "./groups/GroupDetails";
+import StudentDetails from "./students/StudentDetails";
 
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
           <DefaultLayout exact path="/groups" component={() => <GroupsList/>} />
           <DefaultLayout exact path="/analytics" component={() => <Analytics/>} />
           <DefaultLayout exact path="/group/info/:groupId" component={() => <GroupDetails/>} />
+          <DefaultLayout exact path="/student/info/:studentId" component={() => <StudentDetails/>} />
 
       </BrowserRouter>,
   </React.StrictMode>,

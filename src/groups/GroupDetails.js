@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Pagination from "../Pagination";
 import axios from "axios";
 
 class GroupDetails extends React.Component {

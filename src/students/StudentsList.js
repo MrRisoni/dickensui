@@ -60,7 +60,10 @@ class StudentsList extends React.Component {
         return (
             <section id="studentsList">
                 {this.state.fetched &&
-                    <Pagination columns={colNames} keyName="entityId" data={this.state.data}/>
+                    <Pagination columns={colNames}
+                                urlRef={"/student/info/"}
+                                keyName="id"
+                                data={this.state.data}/>
                 }
             </section>
         )
