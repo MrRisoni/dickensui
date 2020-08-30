@@ -21,7 +21,7 @@ function Pagination(props) {
                                     return (<td key={k}>{row[val]}</td>)
                                 }
                                 else {
-                                    return (<td><Link key={k} to={props.urlRef + row['id']}>{row[val]}</Link></td>)
+                                    return (<td><Link key={k} to={props.urlRef + row[props.keyName]}>{row[val]}</Link></td>)
                                 }
                             })
                             }
