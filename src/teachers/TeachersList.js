@@ -8,20 +8,20 @@ class TeachersList extends React.Component {
         super(props);
 
         this.state = {
-            pages:0,
-            totalRecords:0,
-            data:[],
-            fetched:false,
+            pages: 0,
+            totalRecords: 0,
+            data: [],
+            fetched: false,
         }
     }
 
     componentDidMount() {
         const self = this;
-        axios.get('http://localhost:8080/api/teachers').then(rsp =>{
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/teachers`).then(rsp => {
             self.setState({
                 data: rsp.data.teachers,
                 totalRecords: rsp.data.totalRecords,
-                fetched:true
+                fetched: true
             })
         })
     }
@@ -31,36 +31,36 @@ class TeachersList extends React.Component {
 
         const colNames = [
             {
-                id:0,
-                title:'id'
+                id: 0,
+                title: 'id'
             },
             {
-                id:1,
-                title:'Name'
+                id: 1,
+                title: 'Name'
             },
             {
-                id:2,
-                title:'Registration Date'
+                id: 2,
+                title: 'Registration Date'
             },
             {
-                id:3,
-                title:'#Groups'
+                id: 3,
+                title: '#Groups'
             },
             {
-                id:4,
-                title:'Payments'
+                id: 4,
+                title: 'Payments'
             },
             {
-                id:5,
-                title:'Debts'
+                id: 5,
+                title: 'Debts'
             }
         ]
         return (
             <section id="teachersList">
                 {this.state.fetched &&
-                    <Pagination columns={colNames}
-                                urlRef={"/teacher/info/"}
-                                keyName="entityId" data={this.state.data}/>
+                <Pagination columns={colNames}
+                            urlRef={"/teacher/info/"}
+                            keyName="entityId" data={this.state.data}/>
                 }
             </section>
         )

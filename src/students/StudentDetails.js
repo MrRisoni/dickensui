@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
+import TimeTabling from "../timetabling/TimeTabling";
 
 class StudentDetails extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class StudentDetails extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('http://localhost:8080/api/student/info/2').then(rsp => {
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/student/info/2`).then(rsp => {
             self.setState({
                 data: rsp.data,
                 fetched: true
@@ -131,6 +132,7 @@ class StudentDetails extends React.Component {
                         </table>
                     </div>
                 </div>
+
 
 
             </section>);

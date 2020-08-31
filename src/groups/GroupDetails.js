@@ -13,7 +13,7 @@ class GroupDetails extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('http://localhost:8080/api/group/info/2').then(rsp => {
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/group/info/2`).then(rsp => {
             self.setState({
                 data: rsp.data,
                 fetched: true

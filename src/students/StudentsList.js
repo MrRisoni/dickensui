@@ -17,7 +17,7 @@ class StudentsList extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('http://localhost:8080/api/students').then(rsp =>{
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/students`).then(rsp => {
             self.setState({
                 data: rsp.data.students,
                 totalRecords: rsp.data.totalRecords,

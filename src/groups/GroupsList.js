@@ -17,7 +17,7 @@ class GroupsList extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('http://localhost:8080/api/groups').then(rsp =>{
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/groups`).then(rsp => {
             self.setState({
                 data: rsp.data.groups,
                 totalRecords: rsp.data.totalRecords,

@@ -13,7 +13,7 @@ class TeacherDetails extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('http://localhost:8080/api/student/info/2').then(rsp => {
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/teacher/info/2`).then(rsp => {
             self.setState({
                 data: rsp.data,
                 fetched: true
@@ -28,7 +28,7 @@ class TeacherDetails extends React.Component {
 
             </section>)
         } else {
-            return(<p>Please wait</p>)
+            return (<p>Please wait</p>)
         }
     }
 }
