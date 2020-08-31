@@ -9,6 +9,15 @@ function SideBar() {
                 <a href="/" className="list-group-item list-group-item-action ">Dashboard</a>
                 <a href="/" className="list-group-item list-group-item-action ">Timetable</a>
                 <li className="list-group-item list-group-item-action">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarCoursesDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="navbarCoursesDropdown">
+                        <a className="dropdown-item" href="/courses">Courses List</a>
+                    </div>
+                </li>
+                <li className="list-group-item list-group-item-action">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarStudentsDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Students
@@ -16,7 +25,6 @@ function SideBar() {
                     <div className="dropdown-menu" aria-labelledby="navbarStudentsDropdown">
                         <a className="dropdown-item" href="#">New Student</a>
                         <a className="dropdown-item" href="/students">Students List</a>
-                        <a className="dropdown-item" href="#">Search</a>
                     </div>
                 </li>
                 <li className="list-group-item list-group-item-action">
@@ -27,7 +35,6 @@ function SideBar() {
                     <div className="dropdown-menu" aria-labelledby="navbarTeachersDropdown">
                         <a className="dropdown-item" href="#">New Teacher</a>
                         <a className="dropdown-item" href="/teachers">Teachers List</a>
-                        <a className="dropdown-item" href="#">Search</a>
                     </div>
                 </li>
                 <li className="list-group-item list-group-item-action">
@@ -41,11 +48,6 @@ function SideBar() {
                     </div>
                 </li>
                 <a href="/analytics" className="list-group-item list-group-item-action ">Analytics</a>
-                <a href="#" className="list-group-item list-group-item-action">Users</a>
-                <a href="#" className="list-group-item list-group-item-action ">Staff</a>
-                <a href="#" className="list-group-item list-group-item-action ">My Account</a>
-
-
             </div>
         </div>
     );

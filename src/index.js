@@ -12,12 +12,16 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import GroupDetails from "./groups/GroupDetails";
 import StudentDetails from "./students/StudentDetails";
 import Timetable from "./Timetable";
+import CoursesList from "./CoursesList";
+
+require('dotenv').config()
 
 
 ReactDOM.render(
   <React.StrictMode>
       <BrowserRouter>
           <DefaultLayout exact path="/" component={() => <Timetable/>} />
+          <DefaultLayout exact path="/courses" component={() => <CoursesList/>} />
           <DefaultLayout exact path="/students" component={() => <StudentsList/>} />
           <DefaultLayout exact path="/teachers" component={() => <TeachersList/>} />
           <DefaultLayout exact path="/groups" component={() => <GroupsList/>} />
