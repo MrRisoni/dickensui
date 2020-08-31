@@ -5,17 +5,30 @@ import Chart from "react-apexcharts";
 class Donut extends React.Component {
     constructor(props) {
         super(props);
+            }
 
-        this.state = {
 
-            series: [44, 55, 41, 17, 15],
+
+    render() {
+        let vals = [];
+        let labels = [];
+
+        for (let [key, value] of Object.entries(this.props.data)) {
+            console.log(key, value);
+            vals.push(value);
+            labels.push(key);
+
+        }
+        let chartData = {
+            series: vals,
             options: {
                 chart: {
                     width: 380,
                     type: 'donut',
                 },
+                labels: labels,
                 dataLabels: {
-                    enabled: false
+                    enabled: true
                 },
                 fill: {
                     type: 'gradient',
@@ -40,16 +53,12 @@ class Donut extends React.Component {
 
 
         };
-    }
-
-
-
-    render() {
         return (
-
-
             <div className="donut">
-                <Chart options={this.state.options} series={this.state.series} type="donut" width="380" />
+                <Chart options={chartData.options}
+                       series={chartData.series}
+                       type="donut"
+                       width="600" />
             </div>
 
         );

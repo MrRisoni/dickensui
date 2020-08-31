@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import TimeTabling from "../timetabling/TimeTabling";
 
 class StudentDetails extends React.Component {
     constructor(props) {
@@ -13,6 +12,7 @@ class StudentDetails extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props);
         const self = this;
         axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/student/info/2`).then(rsp => {
             self.setState({
@@ -64,12 +64,14 @@ class StudentDetails extends React.Component {
                     <div className="col-9">
                         <table className="table table-bordered table-stripped">
                             <thead>
-                            <th>id</th>
-                            <th>Group</th>
-                            <th>Joined</th>
-                            <th>Dropped</th>
-                            <th>Payed</th>
-                            <th>Debts</th>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Group</th>
+                                    <th>Joined</th>
+                                    <th>Dropped</th>
+                                    <th>Payed</th>
+                                    <th>Debts</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 {this.state.data.groups.map(grp => (
@@ -93,10 +95,12 @@ class StudentDetails extends React.Component {
                     <div className="col-5">
                         <table className="table table-bordered table-stripped">
                             <thead>
-                            <th>id</th>
-                            <th>Group</th>
-                            <th>Payed</th>
-                            <th>period</th>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Group</th>
+                                    <th>Payed</th>
+                                    <th>period</th>
+                                </tr>
                             </thead>
                             <tbody>
                             {this.state.data.payments.map(pay => (
@@ -114,10 +118,12 @@ class StudentDetails extends React.Component {
                     <div className="col-5">
                         <table className="table table-bordered table-stripped">
                             <thead>
-                            <th>id</th>
-                            <th>Group</th>
-                            <th>Debts</th>
-                            <th>period</th>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Group</th>
+                                    <th>Debts</th>
+                                    <th>period</th>
+                                </tr>
                             </thead>
                             <tbody>
                             {this.state.data.debts.map(dbt => (
