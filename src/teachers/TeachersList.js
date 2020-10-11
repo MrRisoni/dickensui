@@ -17,7 +17,7 @@ class TeachersList extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/teachers`).then(rsp => {
+        axios.get('https://dickenserp-api.herokuapp.com/api/teachers').then(rsp => {
             self.setState({
                 data: rsp.data.teachers,
                 totalRecords: rsp.data.totalRecords,

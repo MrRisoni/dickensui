@@ -13,9 +13,9 @@ class Timetable extends React.Component {
     }
 
     componentDidMount() {
-        console.log('env pont' + process.env.REACT_APP_API_ENDPOINT);        
+     
         const self = this;
-        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/timetable`).then(rsp => {
+        axios.get('https://dickenserp-api.herokuapp.com/api/timetable').then(rsp => {
             self.setState({
                 data: rsp.data,
                 fetched: true

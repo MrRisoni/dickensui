@@ -14,7 +14,7 @@ class StudentDetails extends React.Component {
     componentDidMount() {
         console.log(this.props);
         const self = this;
-        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/student/info/2`).then(rsp => {
+        axios.get('https://dickenserp-api.herokuapp.com/api/student/info/2').then(rsp => {
             self.setState({
                 data: rsp.data,
                 fetched: true

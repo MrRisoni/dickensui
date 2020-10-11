@@ -18,7 +18,7 @@ class CoursesList extends React.Component {
     componentDidMount() {
         const self = this;
         console.log(process.env)
-        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/courses`)
+        axios.get('https://dickenserp-api.herokuapp.com/api/courses')
             .then((responseObj) => {
                 let courses = responseObj.data.map(crs => {
                     return {

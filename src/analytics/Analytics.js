@@ -28,7 +28,7 @@ class Analytics extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/api/revenue/pie`).then(rsp => {
+        axios.get('https://dickenserp-api.herokuapp.com/api/revenue/pie').then(rsp => {
             self.setState({
                 pieData: {
                     profit: rsp.data[0].profit,
