@@ -3,3 +3,4 @@ rm -r app
 mkdir app
 yarn run build
 mv build/ app/
+yarn run start
