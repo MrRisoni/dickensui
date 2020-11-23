@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from "axios";
+import student_info from "./../../server_data/student_info.json";
 
 class StudentDetails extends React.Component {
     constructor(props) {
@@ -14,12 +14,12 @@ class StudentDetails extends React.Component {
     componentDidMount() {
         console.log(this.props);
         const self = this;
-        axios.get('https://dickenserp-api.herokuapp.com/api/student/info/2').then(rsp => {
+        setTimeout( () => {
             self.setState({
-                data: rsp.data,
+                data: student_info,
                 fetched: true
             })
-        })
+        },3000);
     }
 
     render() {

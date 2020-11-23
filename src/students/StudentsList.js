@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Pagination from "../Pagination";
 import SideBar from "../SideBar";
-import axios from "axios";
+import students_list from "./../../server_data/students_list.json";
+
 
 class StudentsList extends React.Component {
     constructor(props) {
@@ -17,13 +18,13 @@ class StudentsList extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('https://dickenserp-api.herokuapp.com/api/students').then(rsp => {
+        setTimeout( () => {
             self.setState({
-                data: rsp.data.students,
-                totalRecords: rsp.data.totalRecords,
+                data: students_list.students,
+                totalRecords: students_list.totalRecords,
                 fetched:true
             })
-        })
+        },3000);
     }
 
     render() {

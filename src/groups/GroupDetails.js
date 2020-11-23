@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from "axios";
+import group_info from "./../../server_data/group_info.json";
 
 class GroupDetails extends React.Component {
     constructor(props) {
@@ -13,12 +13,12 @@ class GroupDetails extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('https://dickenserp-api.herokuapp.com/api/group/info/2').then(rsp => {
+        setTimeout( () => {
             self.setState({
-                data: rsp.data,
+                data: group_info,
                 fetched: true
             })
-        })
+        },3000);
     }
 
 

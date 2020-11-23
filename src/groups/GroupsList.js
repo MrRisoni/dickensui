@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Pagination from "../Pagination";
-import axios from "axios";
-import pie_data from "./../../server_data/group_data.json";
+import group_data from "./../../server_data/group_data.json";
 
 class GroupsList extends React.Component {
     constructor(props) {
@@ -17,13 +16,14 @@ class GroupsList extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('https://dickenserp-api.herokuapp.com/api/groups').then(rsp => {
+        setTimeout( () => {
+
             self.setState({
-                data: rsp.data.groups,
-                totalRecords: rsp.data.totalRecords,
+                data: group_data.groups,
+                totalRecords: group_data.totalRecords,
                 fetched:true
             })
-        })
+        },3000);
     }
 
     render() {

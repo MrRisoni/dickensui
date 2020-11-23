@@ -44,7 +44,7 @@ class Analytics extends React.Component {
                 },
                 fetched: true
             })
-        })
+        },3000);
     }
 
 
