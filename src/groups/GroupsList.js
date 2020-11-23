@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Pagination from "../Pagination";
-import group_data from "./../../server_data/group_data.json";
+import group_data from "../server_data/groups_data.json";
 
 class GroupsList extends React.Component {
     constructor(props) {

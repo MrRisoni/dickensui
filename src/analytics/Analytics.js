@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Donut from "../charts/Donut";
-import pie_data from "./../../server_data/analytics_pie.json";
+import pie_data from "../server_data/analytics_pie.json";
 
 class Analytics extends React.Component {
     constructor(props) {

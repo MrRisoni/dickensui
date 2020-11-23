@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import group_info from "./../../server_data/group_info.json";
+import group_info from "../server_data/group_info.json";
 
 class GroupDetails extends React.Component {
     constructor(props) {

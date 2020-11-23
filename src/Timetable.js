@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TimeTabling from "./timetabling/TimeTabling";
-import timetable_data from "./../server_data/timetable.json";
+import timetable_data from "./server_data/timetable.json";
 
 
 class Timetable extends React.Component {

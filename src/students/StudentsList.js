@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Pagination from "../Pagination";
-import SideBar from "../SideBar";
-import students_list from "./../../server_data/students_list.json";
+import students_list from "../server_data/students_list.json";
 
 
 class StudentsList extends React.Component {

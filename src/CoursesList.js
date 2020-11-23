@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Pagination from "./Pagination";
-import courses_data from "./../server_data/courses.json";
+import courses_data from "./server_data/courses.json";
 
 class CoursesList extends React.Component {
     constructor(props) {

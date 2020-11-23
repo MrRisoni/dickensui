@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import student_info from "./../../server_data/student_info.json";
+import student_info from "../server_data/student_info.json";
 
 class StudentDetails extends React.Component {
     constructor(props) {
