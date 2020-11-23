@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
 import Chart from "react-apexcharts";
 
-
 class Donut extends React.Component {
     constructor(props) {
         super(props);
             }
-
-
 
     render() {
         let vals = [];
@@ -50,7 +47,6 @@ class Donut extends React.Component {
                     }
                 }]
             },
-
 
         };
         return (

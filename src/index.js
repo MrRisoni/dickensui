@@ -16,7 +16,6 @@ import CoursesList from "./CoursesList";
 
 require('dotenv').config()
 
-
 ReactDOM.render(
   <React.StrictMode>
       <BrowserRouter>

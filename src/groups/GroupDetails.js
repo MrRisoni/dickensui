@@ -21,12 +21,10 @@ class GroupDetails extends React.Component {
         },3000);
     }
 
-
     render() {
         if (this.state.fetched) {
             return (<section className="groupSection">
                     <h2>{this.state.data.course}</h2>
-
 
                     <div className="row">
                         <div className="col-12">
@@ -63,8 +61,6 @@ class GroupDetails extends React.Component {
                                     <td>Fee</td>
                                     <td>{this.state.data.fee}</td>
                                 </tr>
-
-
                                 </tbody>
                             </table>
                         </div>

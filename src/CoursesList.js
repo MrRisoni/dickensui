@@ -14,7 +14,6 @@ class CoursesList extends React.Component {
         }
     }
 
-
     componentDidMount() {
         const self = this;
         console.log(process.env)

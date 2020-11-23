@@ -6,7 +6,6 @@ class TimeTabling extends React.Component {
         super(props);
     }
 
-
     render() {
         return (<section id="timetableSection">
 
@@ -31,9 +30,7 @@ class TimeTabling extends React.Component {
                 ))}
 
             </div>
-
         </section>)
-
     }
 }
 

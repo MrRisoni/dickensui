@@ -47,7 +47,6 @@ class Analytics extends React.Component {
         },3000);
     }
 
-
     render() {
         if (this.state.fetched) {
             return (
