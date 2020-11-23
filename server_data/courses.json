@@ -1,0 +1,242 @@
+[
+    {
+       "id":1,
+       "title":"Zertifikat I",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":1,
+       "numGroups":1,
+       "sumPayments":0.00,
+       "sumHours":1,
+       "latestFee":15.00,
+       "latestWage":5.20
+    },
+    {
+       "id":2,
+       "title":"Μαθηματικά Γ Θετικης",
+       "active":1,
+       "courseTypeObj":{
+          "id":1,
+          "title":"??????"
+       },
+       "numStudents":11,
+       "numTeachers":0,
+       "numGroups":1,
+       "sumPayments":0.00,
+       "sumHours":1,
+       "latestFee":15.00,
+       "latestWage":9.00
+    },
+    {
+       "id":3,
+       "title":"Lower",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":4,
+       "title":"Proficiency",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":5,
+       "title":"Delf I",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":6,
+       "title":"Delf II",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":7,
+       "title":"Dalf I",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":8,
+       "title":"Dalf II",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":9,
+       "title":"Mittelstuffe",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":1,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":10,
+       "title":"Groses Deutsches Srpachdiplom",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":11,
+       "title":"Sorbonne",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    },
+    {
+       "id":12,
+       "title":"Μαθηματικά Γ Θετικης",
+       "active":1,
+       "courseTypeObj":{
+          "id":1,
+          "title":"??????"
+       },
+       "numStudents":9,
+       "numTeachers":0,
+       "numGroups":1,
+       "sumPayments":90.00,
+       "sumHours":1,
+       "latestFee":15.00,
+       "latestWage":7.20
+    },
+    {
+       "id":13,
+       "title":"Svenska for Anfanger",
+       "active":1,
+       "courseTypeObj":{
+          "id":2,
+          "title":"Foreign Language"
+       },
+       "numStudents":6,
+       "numTeachers":0,
+       "numGroups":1,
+       "sumPayments":0.00,
+       "sumHours":1,
+       "latestFee":22.00,
+       "latestWage":7.20
+    },
+    {
+       "id":15,
+       "title":"Αρχαια Ελληνικά",
+       "active":1,
+       "courseTypeObj":{
+          "id":1,
+          "title":"??????"
+       },
+       "numStudents":6,
+       "numTeachers":0,
+       "numGroups":1,
+       "sumPayments":0.00,
+       "sumHours":1,
+       "latestFee":18.00,
+       "latestWage":10.00
+    },
+    {
+       "id":22,
+       "title":"Sorbonne I",
+       "active":1,
+       "courseTypeObj":{
+          "id":1,
+          "title":"Foreign Language"
+       },
+       "numStudents":0,
+       "numTeachers":0,
+       "numGroups":0,
+       "sumPayments":0.00,
+       "sumHours":0,
+       "latestFee":null,
+       "latestWage":null
+    }
+ ]

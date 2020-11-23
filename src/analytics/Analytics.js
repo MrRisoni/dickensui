@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import SideBar from "../SideBar";
-import axios from "axios";
 import Donut from "../charts/Donut";
-import GroupsList from "../groups/GroupsList";
+import pie_data from "./../../server_data/analytics_pie.json";
 
 class Analytics extends React.Component {
     constructor(props) {
@@ -28,20 +26,21 @@ class Analytics extends React.Component {
 
     componentDidMount() {
         const self = this;
-        axios.get('https://dickenserp-api.herokuapp.com/api/revenue/pie').then(rsp => {
+        setTimeout( () => {
+
             self.setState({
                 pieData: {
-                    profit: rsp.data[0].profit,
-                    grossIncome: rsp.data[0].grossIncome,
-                    netIncome: rsp.data[0].netIncome,
-                    studentPayments: rsp.data[0].studentPayments,
-                    totalExpenses: rsp.data[0].totalExpenses,
-                    taxes: rsp.data[0].taxes,
-                    staffPayments: rsp.data[0].staffPayments,
-                    staffInsurances: rsp.data[0].staffInsurances,
-                    staffNetPayments: rsp.data[0].staffNetPayments,
-                    studentDebts: rsp.data[0].studentDebts,
-                    staffInDebt: rsp.data[0].staffInDebt,
+                    profit: pie_data[0].profit,
+                    grossIncome: pie_data[0].grossIncome,
+                    netIncome: pie_data[0].netIncome,
+                    studentPayments: pie_data[0].studentPayments,
+                    totalExpenses: pie_data[0].totalExpenses,
+                    taxes: pie_data[0].taxes,
+                    staffPayments: pie_data[0].staffPayments,
+                    staffInsurances: pie_data[0].staffInsurances,
+                    staffNetPayments: pie_data[0].staffNetPayments,
+                    studentDebts: pie_data[0].studentDebts,
+                    staffInDebt: pie_data[0].staffInDebt,
                 },
                 fetched: true
             })

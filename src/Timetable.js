@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import axios from "axios";
 import TimeTabling from "./timetabling/TimeTabling";
+import timetable_data from "./../server_data/timetable.json";
+
 
 class Timetable extends React.Component {
     constructor(props) {
@@ -15,12 +16,13 @@ class Timetable extends React.Component {
     componentDidMount() {
      
         const self = this;
-        axios.get('https://dickenserp-api.herokuapp.com/api/timetable').then(rsp => {
+        setTimeout( () => {
             self.setState({
-                data: rsp.data,
+                data: timetable_data,
                 fetched: true
-            })
-        })
+            });
+        },3000);
+       
     }
 
     render() {

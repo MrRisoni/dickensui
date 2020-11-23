@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Pagination from "./Pagination";
-import axios from 'axios'
+import courses_data from "./../server_data/courses.json";
 
 class CoursesList extends React.Component {
     constructor(props) {
@@ -18,9 +18,9 @@ class CoursesList extends React.Component {
     componentDidMount() {
         const self = this;
         console.log(process.env)
-        axios.get('https://dickenserp-api.herokuapp.com/api/courses')
-            .then((responseObj) => {
-                let courses = responseObj.data.map(crs => {
+        setTimeout( () => {
+
+            let courses = courses_data.map(crs => {
                     return {
                         id: crs.id,
                         title: crs.title,
@@ -36,10 +36,10 @@ class CoursesList extends React.Component {
                 })
                 self.setState({
                     data: courses,
-                    totalRecords: responseObj.data.length,
+                    totalRecords: courses_data.length,
                     fetched: true
                 })
-            })
+            },3000);
     }
 
     render() {

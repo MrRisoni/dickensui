@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Pagination from "../Pagination";
-import SideBar from "../SideBar";
 import axios from "axios";
+import pie_data from "./../../server_data/group_data.json";
 
 class GroupsList extends React.Component {
     constructor(props) {
